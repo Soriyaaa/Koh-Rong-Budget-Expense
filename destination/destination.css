@@ -505,16 +505,34 @@ ul { margin: 0; padding: 0; list-style: none; }
    RESPONSIVE — Tailwind-equivalent breakpoints
    sm: 640px / md: 768px / lg: 1024px
 ════════════════════════════════════════ */
-
-/* ── sm (≥640px) ── */
-@media (min-width: 640px) {
-  .day-arc-svg-wrap { display: block; }
-  .day-arc-list { display: none; }
-
-  .activities-grid { grid-template-columns: 1fr 1fr; }
-
-  .tip-row { flex-direction: row; gap: 32px; }
-  .tip-label { width: 140px; }
+@media (max-width: 640px) {
+  /* Nav */
+  .nav-inner { padding: 0 20px; height: 64px; }
+  .nav-toggle { display: flex; }
+  .nav-mobile {
+    position: absolute;
+    top: 100%;
+    left: 0; right: 0;
+    background: var(--green-nav);
+    border-bottom: 1px solid var(--rule-nav);
+    flex-direction: column;
+    gap: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .3s ease;
+    align-items: flex-start;
+  }
+  .nav-mobile.is-open { max-height: 280px; }
+  .nav-mobile a {
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--rule);
+    width: 100%;
+    font-size: 14px;
+  }
+  .nav-mobile a.active {
+    border-left: 3px solid var(--green-dark);
+    border-bottom-color: var(--rule);
+  }
 }
 
 /* ── md (≥768px) ── */

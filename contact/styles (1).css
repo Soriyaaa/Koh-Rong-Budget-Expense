@@ -317,7 +317,7 @@ ul { margin: 0; padding: 0; }
 /* ════════════════════════════════════════
    RESPONSIVE
 ════════════════════════════════════════ */
-@media (max-width: 900px) {
+@media (max-width: 640px) {
   .footer-inner {
     grid-template-columns: 1fr 1fr;
     row-gap: 36px;

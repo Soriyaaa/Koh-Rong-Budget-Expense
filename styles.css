@@ -125,7 +125,7 @@ p { margin: 0; }
 .hero {
   background:
     linear-gradient(120deg, rgba(9, 34, 27, 0.92) 0%, rgba(16, 52, 43, 0.74) 50%, rgba(8, 30, 25, 0.8) 100%),
-    url('../image1.jpg') center/cover no-repeat;
+    url(image1.jpg) center/cover no-repeat;
   padding: 80px 40px 60px;
   min-height: 80vh;
   display: flex;
